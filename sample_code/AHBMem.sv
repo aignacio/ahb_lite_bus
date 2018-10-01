@@ -5,23 +5,23 @@ module AHBMemoryLite #(
   parameter AHB_DATA_WIDTH  = 32,
   parameter AHB_ADDR_WIDTH  = 32
 )(
- 	input wire  HCLK,
-	input wire  HRESETn,
+  input wire  HCLK,
+  input wire  HRESETn,
 
   input wire  HSEL,
   input wire  [AHB_ADDR_WIDTH-1:0] HADDR,
-	input wire  [AHB_DATA_WIDTH-1:0] HWDATA,
-	input wire  HWRITE,
-	input wire  [2:0] HSIZE,
-	input wire  [2:0] HBURST,
-	input wire  [3:0] HPROT,
-	input wire  [1:0] HTRANS,
-	input wire  HMASTLOCK,
-	input wire  HREADY,
+  input wire  [AHB_DATA_WIDTH-1:0] HWDATA,
+  input wire  HWRITE,
+  input wire  [2:0] HSIZE,
+  input wire  [2:0] HBURST,
+  input wire  [3:0] HPROT,
+  input wire  [1:0] HTRANS,
+  input wire  HMASTLOCK,
+  input wire  HREADY,
 
   output  reg [AHB_DATA_WIDTH-1:0] HRDATA,
-	output  reg HREADYOUT,
-	output  reg HRESP//,
+  output  reg HREADYOUT,
+  output  reg HRESP//,
 
   //Aux interfaces
   // input mst_HSEL_ext,
