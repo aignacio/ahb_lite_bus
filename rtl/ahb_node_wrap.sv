@@ -14,7 +14,8 @@
 module ahb_node_wrap #(
   parameter NB_SLAVES = 8,
   parameter AHB_DATA_WIDTH = 32,
-  parameter AHB_ADDR_WIDTH = 32
+  parameter AHB_ADDR_WIDTH = 32,
+  parameter BYPASS_HSEL = 0
 )
 (
   // SLAVE PORTS
@@ -65,7 +66,8 @@ module ahb_node_wrap #(
   ahb_node #(
     .NB_SLAVES(NB_SLAVES),
     .AHB_DATA_WIDTH(AHB_DATA_WIDTH),
-    .AHB_ADDR_WIDTH(AHB_ADDR_WIDTH)
+    .AHB_ADDR_WIDTH(AHB_ADDR_WIDTH),
+    .BYPASS_HSEL(BYPASS_HSEL)
   ) ahb_node_u1
   (
     // to SLAVES PORT

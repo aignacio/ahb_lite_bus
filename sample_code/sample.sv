@@ -37,7 +37,8 @@ module sample_code(
   ahb_node_wrap #(
     .NB_SLAVES      ( `AHB_SLAVES_NUM ),
     .AHB_ADDR_WIDTH ( `AHB_HADDR_SIZE ),
-    .AHB_DATA_WIDTH ( `AHB_HDATA_SIZE )
+    .AHB_DATA_WIDTH ( `AHB_HDATA_SIZE ),
+    .BYPASS_HSEL    (               0 ) // If you change to '1' it'll route the HSEL signal to the slave according to master change's
   )
   ahb_node_wrap_i (
     .ahb_slaves   ( s_slave           ),
