@@ -45,7 +45,7 @@ module AHBMemoryLite #(
       if (HSEL) begin
         HREADYOUT     <=  1'b1;
         HRESP         <=  1'b0;
-        address_sram  <=  HADDR[BIT_WIDTH_ADDR+1:2];
+        address_sram  <=  HADDR[BIT_WIDTH_ADDR-1:2];
         byte_select   <=  HADDR[1:0];
         reg_size      <=  HSIZE;
         write_en      <=  HWRITE;
